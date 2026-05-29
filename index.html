@@ -1,0 +1,135 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azul's Game Site</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div id="siteLoader">
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <p>Loading stuff.</p>
+    </div>
+
+    <div class="container">
+
+        <header>
+            <h1>Azul's Game Site</h1>
+
+            <p class="subtitle">
+                A collection of games I like because they're cool.
+            </p>
+        </header>
+
+        <section class="games">
+
+            <div
+                class="game"
+                onclick="openGame('/crimson/index.html','Crimson Fantasia')"
+            >
+                <img
+                    src="https://kappa.lol/kymaWw"
+                    alt="Crimson Fantasia"
+                >
+
+                <div class="content">
+                    <h2>Crimson Fantasia</h2>
+                </div>
+            </div>
+
+            <div
+                class="game"
+                onclick="openGame('/subway/index.html','Subway Surfers')"
+            >
+                <img
+                    src="https://litter.catbox.moe/keiwb0rmn8nhfrf0.jpg"
+                    alt="Subway Surfers"
+                >
+
+                <div class="content">
+                    <h2>Subway Surfers</h2>
+                </div>
+            </div>
+
+            <div
+                class="game"
+                onclick="openGame('/cluster/index.html','Cluster Rush')"
+            >
+                <img
+                    src="https://litter.catbox.moe/lwsjvkj4b3nizrkt.webp"
+                    alt="Cluster Rush"
+                >
+
+                <div class="content">
+                    <h2>Cluster Rush</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            Games: 3
+        </footer>
+
+    </div>
+
+    <div id="overlay">
+
+        <div id="gameBox">
+
+            <div class="toolbar">
+
+                <div id="gameTitle">
+                    Game
+                </div>
+
+                <div class="actions">
+
+                    <button onclick="fullscreenGame()">
+                        <i data-lucide="maximize"></i>
+                        Fullscreen
+                    </button>
+
+                    <button onclick="closeGame()">
+                        <i data-lucide="x"></i>
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div id="iframeLoader">
+
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <p>Loading stuff.</p>
+
+            </div>
+
+            <iframe id="gameFrame"></iframe>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
